@@ -7,7 +7,7 @@ hidden_board = []
 
 # "O" = Capital letter o
 for i in range(8):
-    hidden_board.append(["|"] * 8)
+    hidden_board.append(["H"] * 8)
 for i in range(8):
     board.append(["O"] * 8)  # Appends 8  * "O" to the empty-list board
 # expected output["O", "O", "O", "O", "O"]
@@ -49,11 +49,10 @@ def count_hit_ships(board):
 
 create_ships(hidden_board)
 turns = 10
+print("Welcome to battleship")
+print("---------------------")
 while turns > 0:
-    print("Welcome to battleship")
-    print("---------------------")
     print_board(board)
-    print_board(hidden_board)
     row, col = get_ship_location()
     if board[row][col] == '-':
         print("You guessed that already")
@@ -65,7 +64,13 @@ while turns > 0:
         print("Sorry, you missed")
         board[row][col] = ' - '
         turns -= 1
-    if count_hit_ships(board) == 5:
-        print("Well done you sunk all the battleships")
-        break
-    print(f"You have {turns} turns left")
+        if count_hit_ships(board) == 5:
+            print("Well done you sunk all the battleships")
+            break
+        print(f"You have {turns} turns left")
+    
+
+def quit_game():
+    quit_game = input("Press Q to quit at any time")
+    if quit_game == "Q":
+        create_ships(board)    
