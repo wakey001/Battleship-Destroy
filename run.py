@@ -26,9 +26,10 @@ def random_col(board):
 
 ship_row = random_row(board)
 ship_col = random_col(board)
-guess_row = int(input("Guess Row: "))
-guess_col = int(input("Guess Col: "))
-
 print(ship_row)
 print(ship_col)
+guess_row = int(input("Guess Row: "))  # User to guess a Row 
+guess_col = int(input("Guess Col: "))  # User to guess a Col
+
+
 
