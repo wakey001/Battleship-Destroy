@@ -1,14 +1,16 @@
-import random
-
-'Empty list for the gameboard'
+# import random
 
 board = []
-for i in range(5):
-    board.append(['O'] * 5)
+# "O" = Capital letter o
 
-'Gets rid or the "" and inserts whitspace '
+for i in range(5):
+    board.append(["O"] * 5)  # Appends 5 * "O" to the empty-list board
+# expected output["O", "O", "O", "O", "O"]
+
+
 def print_board(board):
     for row in board:
-        print(" ".join(row))
+        print(" ".join(row))  # Gets rid or the "" and inserts whitspace
+
 
 print_board(board)
