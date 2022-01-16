@@ -61,8 +61,11 @@ while turns > 0:
         print("congratulations, you hit the battleship")
         board[row][col] = "X"
         turns -= 1
-
-
-
-
-
+    else:
+        print("Sorry, you missed")
+        board[row][col] = ' - '
+        turns -= 1
+    if count_hit_ships(board) == 5:
+        print("Well done you sunk all the battleships")
+        break
+    print(f"You have {turns} turns left")
