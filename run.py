@@ -27,15 +27,15 @@ def create_ships(board):
 
 
 def get_ship_location():
-    guess_row = input("Please enter a row between 1-8: ")
-    while guess_row not in '12345678':
+    row = input("Please enter a row between 1-8: ")
+    while row not in '12345678':
         print("Error enter a number between 1-8")
-        guess_row = input("Please enter a row between 1-8: ")
-    guess_col = input("Please enter a column between 1-8: ")
-    while guess_col not in '12345678':
+        row = input("Please enter a row between 1-8: ")
+    col = input("Please enter a column between 1-8: ")
+    while col not in '12345678':
         print("Error enter a number between 1-8")
-    guess_col = input("Please enter a number between 1-8: ")
-    return int(guess_row) - 1, int(guess_col) - 1
+        col = input("Please enter a number between 1-8: ")
+    return int(row) - 1, int(col) - 1
 
 
 def count_hit_ships(board):
