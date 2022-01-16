@@ -26,12 +26,16 @@ def random_col(board):
 
 ship_row = random_row(board)
 ship_col = random_col(board)
-print(ship_row)
-print(ship_col)
 guess_row = int(input("Guess Row: "))  # User to guess a Row 
 guess_col = int(input("Guess Col: "))  # User to guess a Col
-
+print(ship_row)
+print(ship_col)
 if guess_row == ship_row and guess_col == guess_col:
     print("Well done you found and destroyed the battleship!")
-    
+else:
+    guess_row > range(5) or guess_col > range(5):
+        print("That co-ordinate is off the board please try again")
+else:
+    print("You missed the battleship!")
+
 
