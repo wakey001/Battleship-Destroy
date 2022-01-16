@@ -35,6 +35,7 @@ if guess_row == ship_row and guess_col == guess_col:
 else:
     if guess_row < 0 or guess_row > 4 or guess_col < 0 and guess_col > 4:
         print("That co-ordinate is off the board please try again")
+        elif(board[guess_row][guess_col]) == "!"
     else: 
         print("You missed the battleship!")
 
