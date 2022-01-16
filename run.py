@@ -2,8 +2,12 @@ from random import randint
 
 
 board = []
-# "O" = Capital letter o
+hidden_board = []
 
+
+# "O" = Capital letter o
+for i in range(8):
+    hidden_board.append(["O"] * 8)
 for i in range(8):
     board.append(["O"] * 8)  # Appends 8  * "O" to the empty-list board
 # expected output["O", "O", "O", "O", "O"]
@@ -41,3 +45,8 @@ def count_hit_ships(board):
             if col == "X":
                 count += 1
     return count
+
+
+turns = 10
+
+
