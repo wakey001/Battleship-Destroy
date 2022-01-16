@@ -39,6 +39,7 @@ else:
         print("Already guessed here, try again.")
     else: 
         print("You missed the battleship!")
+        board[guess_row][guess_col] = "!"
     print_board(board)
 
 
