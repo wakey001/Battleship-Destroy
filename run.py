@@ -33,9 +33,9 @@ print(ship_col)
 if guess_row == ship_row and guess_col == guess_col:
     print("Well done you found and destroyed the battleship!")  
 else:
-    if guess_row > range(5) or guess_col > range(5):
+    if guess_row < 0 or guess_row > 4 or guess_col < 0 and guess_col > 4:
         print("That co-ordinate is off the board please try again")
-    else:
+    else: 
         print("You missed the battleship!")
 
 
