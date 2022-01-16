@@ -1,4 +1,4 @@
-# import random
+from random import randint
 
 board = []
 # "O" = Capital letter o
@@ -13,4 +13,15 @@ def print_board(board):
         print(" ".join(row))  # Gets rid or the "" and inserts whitspace
 
 
-print_board(board)
+def random_row(board):
+    return randint(0, len(board) - 1)  # Random integer within the board, Row
+
+
+def random_col(board):
+    return randint(0, len(board[0]) - 1)  # Random int within the board, Col
+
+
+print(random_row(board))
+
+
+random_col(board)
