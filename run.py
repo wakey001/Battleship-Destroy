@@ -31,11 +31,11 @@ guess_col = int(input("Guess Col: "))  # User to guess a Col
 print(ship_row)
 print(ship_col)
 if guess_row == ship_row and guess_col == guess_col:
-    print("Well done you found and destroyed the battleship!")
+    print("Well done you found and destroyed the battleship!")  
 else:
-    guess_row > range(5) or guess_col > range(5):
+    if guess_row > range(5) or guess_col > range(5):
         print("That co-ordinate is off the board please try again")
-else:
-    print("You missed the battleship!")
+    else:
+        print("You missed the battleship!")
 
 
