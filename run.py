@@ -18,7 +18,7 @@ def print_board(board):
         print(" ".join(row))  # Gets rid or the "" and inserts whitspace
 
 
-def create_ships(board):
+def create_ships(board): 
     for ship in range(5):
         ship_row, ship_col = randint(0, 7), randint(0, 7)
         while board[ship_row][ship_col] == "X":
@@ -26,13 +26,13 @@ def create_ships(board):
         board[ship_row][ship_col] = "X"
 
 
-def get_ship_location():
+def get_ship_location(): 
     row = input("Please enter a row between 1-8: ")
-    while row not in '12345678':
+    while row not in '1, 2, 3, 4, 5, 6, 7, 8':
         print("Error enter a number between 1-8")
         row = input("Please enter a row between 1-8: ")
     col = input("Please enter a column between 1-8: ")
-    while col not in '12345678':
+    while col not in '1, 2, 3, 4, 5, 6, 7, 8':
         print("Error enter a number between 1-8")
         col = input("Please enter a number between 1-8: ")
     return int(row) - 1, int(col) - 1
@@ -47,7 +47,7 @@ def count_hit_ships(board):
     return count
 
 
-create_ships(hidden_board)
+create_ships(board)
 turns = 10
 print("Welcome to battleship")
 print("---------------------")
@@ -56,9 +56,9 @@ while turns > 0:
     row, col = get_ship_location()
     if board[row][col] == '-':
         print("You guessed that already")
-    elif hidden_board[row][col] == "X":
+    elif board[row][col] == "X":
         print("congratulations, you hit the battleship")
-        hidden_board[row][col] = "X"
+        board[row][col] = "X"
         turns -= 1
     else:
         print("Sorry, you missed")
