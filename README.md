@@ -26,7 +26,7 @@ The player gets 10 turns to find all randomly placed ships on a 2d style grid. T
         * [Unfixed Bugs](#unfixed-bugs)
     * [Deployment](#deployment)
     * [Credits](#credits)
-    
+
 \
 &nbsp;
 [Back to Top](#table-of-contents)
@@ -112,6 +112,32 @@ The user is prompted for their name, this is then shown above there board. They 
 ###
 
 ## Deployment
+The site was deployed via Heroku. Here is the live link - []()
+
+The project repository was created using the *Code-Institute-Org/python-essentials-template* on GitHub and edited using GitPod.
+
+### Deployment via Heroku
+* Visit [heroku.com](https://www.heroku.com/home "Heroku")
+* Create a new account or sign in
+* From the dashboard, select **New** and then **Create new app**
+* Enter an individual app name into the text box, select a region from the dropdown and then press **Create app**
+* A Heroku app has now been created and the **Deploy** tab is opened. 
+* Select the **Settings** tab
+* Click on the **Reveal Config Vars** button
+* In the textbox with KEY as the placeholder, enter *CREDS*
+* In the textbox with VALUE as the placeholder, enter the content from the creds.json file and press **Add**
+* In the textbox with KEY as the placeholder, enter *PORT*
+* In the textbox with VALUE as the placeholder, enter *8000*
+* press **Add**
+* In the buildpacks section of the settings tab, click on **Add Buildpack**, select **python** and then save changes
+* Click on **Add Buildpack** again, select **node.js** and then save changes
+* When they are on the dashboard, ensure that python is above node.js on the list
+* Open the **Deploy** tab
+* In the deployment method section, select **GitHub** and confirm the connection.
+* Enter the repo-name into the text box and click **Search**. When the correct repo appears below, click **Connect**
+* In the Automatic deploys section, click **Enable Automatic Deploys**. This updates every time GitHub code is pushed
+* To complete the process click on the **Deploy Brach** button in the Manual deploy section, this will take a few seconds to complete while Heroku builds the app
+* A message will appear informing you that the app was successfully deployed and a **View** button will bring you to the live site
 
 
 ## Credits
