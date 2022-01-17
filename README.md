@@ -109,7 +109,15 @@ The user is prompted for their name, this is then shown above there board. They 
 # Testing
 ## Code validation
 ## Bugs
-###
+
+* One of bugs I had was when guessing a co-ordinate eg row 1 column 1, the - sign used to display a miss on the board would move the existing O over one place. Instead of the grid being a 8x8 that particular row would become a 9.
+
+* As it appeared to be to do with the miss part of the code i narrowed it down by changing the symbol to a backslash as there were two pieces of code with misses. The bug had not changed and so was obvious it was the other line with the - part once a miss had been logged.
+Once focused on that line of code it was then quite obvious that I had put space around the - so instead of "-" I had put " - ". I simply deleted the code.
+
+* This then fixed the problem and the miss then logged the "-" as it should have. And did not displace the grid anymore.
+
+
 
 ## Deployment
 The site was deployed via Heroku. Here is the live link - []()
