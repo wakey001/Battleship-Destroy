@@ -58,11 +58,11 @@ while turns > 0:
         print("You guessed that already")
     elif hidden_board[row][col] == "X":
         print("congratulations, you hit the battleship")
-        board[row][col] = "X"
+        hidden_board[row][col] = "X"
         turns -= 1
     else:
         print("Sorry, you missed")
-        board[row][col] = ' - '
+        board[row][col] = '-'
         turns -= 1
         if count_hit_ships(board) == 5:
             print("Well done you sunk all the battleships")
@@ -73,4 +73,5 @@ while turns > 0:
 def quit_game():
     quit_game = input("Press Q to quit at any time")
     if quit_game == "Q":
-        create_ships(board)    
+        create_ships(board) 
+    quit_game()
