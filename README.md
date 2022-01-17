@@ -108,6 +108,7 @@ The user is prompted for their name, this is then shown above there board. They 
 
 # Testing
 ## Code validation
+My code has been tested via this validator and currently does not show any red flags.[PEP8 online](http://pep8online.com/)
 ## Bugs
 
 * One of bugs I had was when guessing a co-ordinate eg row 1 column 1, the - sign used to display a miss on the board would move the existing O over one place. Instead of the grid being a 8x8 that particular row would become a 9.
