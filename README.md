@@ -32,6 +32,7 @@ The player gets 10 turns to find all randomly placed ships on a 2d style grid. T
 * I expect to have the option of reading the rules or not
 * I expect not to be able to make any typing errors
 # How to play
+The user is prompted for their name, this is then shown above there board. They are then asked which row they would like to guess, row and column and also the number of turns is displayed. The user is then told if they hit or missed the computers ships and told of thier turns remaining, and subsequently told if they try to use the same co-ordinates later on. If the user hits all the ships they win, and the game is over, it is also over if they run out of turns.
 
 ## Wireframes
 ## Existing features
