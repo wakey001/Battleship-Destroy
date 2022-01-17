@@ -70,10 +70,11 @@ The user is prompted for their name, this is then shown above there board. They 
 
 ## Wireframes
 
+
 ## Existing features
 * 
 ## Features to be implemented
-*
+* 
 
 \
 &nbsp;

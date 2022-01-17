@@ -52,7 +52,9 @@ turns = 10
 print("Welcome to battleship")
 print("---------------------")
 while turns > 0:
-    print_board(board)
+    if (turns == 0):
+        print("Game Over")
+        print_board(board)
     row, col = get_ship_location()
     if board[row][col] == '-':
         print("You guessed that already")
