@@ -3,8 +3,6 @@
 ## Goal for this project
 * This project will be a python terminal battleship game where the player will face the computer.
 The player gets 10 turns to find all randomly placed ships on a 2d style grid. The player finds the ships by entering the row and column co-ordinates as numbers. The game ends when either the turns are used up or the player hits all the computers ships. 
-## Table Of Contents
-
 # Ux
 ## User Goals
 * Know when it is the users go and not
