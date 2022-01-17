@@ -1,6 +1,6 @@
 # Card 
 * [insert ami]()
-## Goal for this project
+# Goal for this project
 * This project will be a python terminal battleship game where the player will face the computer.
 The player gets 10 turns to find all randomly placed ships on a 2d style grid. The player finds the ships by entering the row and column co-ordinates as numbers. The game ends when either the turns are used up or the player hits all the computers ships. 
 # Table of Contents
@@ -26,6 +26,13 @@ The player gets 10 turns to find all randomly placed ships on a 2d style grid. T
         * [Unfixed Bugs](#unfixed-bugs)
     * [Deployment](#deployment)
     * [Credits](#credits)
+    
+\
+&nbsp;
+[Back to Top](#table-of-contents)
+\
+&nbsp;
+
 # Ux
 ## User Goals
 * Know when it is the users go and not
@@ -41,6 +48,12 @@ The player gets 10 turns to find all randomly placed ships on a 2d style grid. T
 * Make the rules clear to understand
 * Have the game display the score clearly so the user can understand who is winning.
 * Ensure that there is validation for expected answers on all user inputs.
+
+\
+&nbsp;
+[Back to Top](#table-of-contents)
+\
+&nbsp;
 
 # User requirements and expectations
 ## Requriements
@@ -61,6 +74,13 @@ The user is prompted for their name, this is then shown above there board. They 
 * 
 ## Features to be implemented
 *
+
+\
+&nbsp;
+[Back to Top](#table-of-contents)
+\
+&nbsp;
+
 # Technologies used
 ## Languages
 * [HTML](https://en.wikipedia.org/wiki/HTML5) for the structure of the site
@@ -80,6 +100,11 @@ The user is prompted for their name, this is then shown above there board. They 
 * For general code queries [W3Schools](https://www.w3schools.com/)
 * For spell checking [Grammarly](https://www.grammarly.com/?&utm_source=google&utm_medium=cpc&utm_campaign=10531689996&utm_targetid=aud-332195722204:dsa-915389969968&gclid=CjwKCAiArOqOBhBmEiwAsgeLmf6WBpNM8xWU9Gif_6buwExECbE12BjfjeGQ3iyruQf4xasnRCJfZxoCW6QQAvD_BwE&gclsrc=aw.ds)
 
+\
+&nbsp;
+[Back to Top](#table-of-contents)
+\
+&nbsp;
 
 # Testing
 ## Code validation
