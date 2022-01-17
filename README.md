@@ -3,6 +3,29 @@
 ## Goal for this project
 * This project will be a python terminal battleship game where the player will face the computer.
 The player gets 10 turns to find all randomly placed ships on a 2d style grid. The player finds the ships by entering the row and column co-ordinates as numbers. The game ends when either the turns are used up or the player hits all the computers ships. 
+# Table of Contents
+* [UX](#ux "UX")
+    * [User Goals](#user-goals "User Goals")
+    * [User Stories](#user-stories "User Stories")
+    * [Site Owners Goals](#site-owners-goals)
+    * [User Requirements and Expectations](#user-requirements-and-expectations)
+         * [Requirements](#requirements)
+         * [Expectations](#expectations)
+    * [How to Play](#how-to-play)
+    * [Wireframes](#wireframes)
+    * [Features](#features)
+        * [Existing Features](#existing-features)
+        * [Features to be implemented](#features-to-be-implemented)
+    * [Technologies used](#technologies-used)
+        * [Languages](#languages)
+        * [Libraries and Frameworks](#libraries-and-frameworks)
+        * [Tools](#tools)
+    * [Testing](#testing))
+        * [Code Validation](#code-validation)
+        * [Bugs](#bugs)
+        * [Unfixed Bugs](#unfixed-bugs)
+    * [Deployment](#deployment)
+    * [Credits](#credits)
 # Ux
 ## User Goals
 * Know when it is the users go and not
@@ -33,8 +56,11 @@ The player gets 10 turns to find all randomly placed ships on a 2d style grid. T
 The user is prompted for their name, this is then shown above there board. They are then asked which row they would like to guess, row and column and also the number of turns is displayed. The user is then told if they hit or missed the computers ships and told of thier turns remaining, and subsequently told if they try to use the same co-ordinates later on. If the user hits all the ships they win, and the game is over, it is also over if they run out of turns.
 
 ## Wireframes
+
 ## Existing features
+* 
 ## Features to be implemented
+*
 # Technologies used
 ## Languages
 * [HTML](https://en.wikipedia.org/wiki/HTML5) for the structure of the site
@@ -59,6 +85,8 @@ The user is prompted for their name, this is then shown above there board. They 
 ## Code validation
 ## Bugs
 ###
+
 ## Deployment
+
 
 ## Credits
