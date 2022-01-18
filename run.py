@@ -27,14 +27,14 @@ def create_ships(board):
 
 
 def get_ship_location(): 
-    row = input("Please enter a row between 1-8: ")
+    row = input("Please enter a row between 1-8:\n")
     while row not in '1, 2, 3, 4, 5, 6, 7, 8':
         print("Error enter a number between 1-8")
-        row = input("Please enter a row between 1-8: ")
-    col = input("Please enter a column between 1-8: ")
+        row = input("Please enter a row between 1-8:\n")
+    col = input("Please enter a column between 1-8:\n")
     while col not in '1, 2, 3, 4, 5, 6, 7, 8':
         print("Error enter a number between 1-8")
-        col = input("Please enter a number between 1-8: ")
+        col = input("Please enter a number between 1-8:\n")
     return int(row) - 1, int(col) - 1
 
 
@@ -72,8 +72,10 @@ while turns > 0:
         print(f"You have {turns} turns left")
     
 
-def quit_game():
-    quit_game = input("Press Q to quit at any time")
-    if quit_game == "Q":
-        create_ships(board) 
-    quit_game()
+# quit_game = input("Press Q to quit at any time: q")
+# if quit_game == "Q" or quit_game == "q":
+    
+
+
+ 
+    
