@@ -21,9 +21,9 @@ def print_board(board):
 def create_ships(board): 
     for ship in range(5):
         ship_row, ship_col = randint(0, 7), randint(0, 7)
-        while hidden_board[ship_row][ship_col] == "X":
+        while board[ship_row][ship_col] == "X":
             ship_row, ship_col = randint(0, 7), randint(0, 7)
-        hidden_board[ship_row][ship_col] = "X"
+        board[ship_row][ship_col] = "X"
 
 
 def get_ship_location(): 
@@ -47,18 +47,18 @@ def count_hit_ships(board):
     return count
 
 
-create_ships(board)
+create_ships(hidden_board)
+print_board(hidden_board)
 turns = 10
 print("Welcome to battleship")
 print("---------------------")
 while turns > 0:
     print_board(board)
     print("---------------------")
-    print_board(hidden_board)
     row, col = get_ship_location()
     if board[row][col] == '-':
         print("You guessed that already")
-    elif board[row][col] == "X":
+    elif hidden_board[row][col] == "X":
         print(f"You hit the battleship you have {turns} turns left")
         board[row][col] = "@"
         turns -= 1
