@@ -21,9 +21,9 @@ def print_board(board):
 def create_ships(board): 
     for ship in range(5):
         ship_row, ship_col = randint(0, 7), randint(0, 7)
-        while board[ship_row][ship_col] == "X":
+        while hidden_board[ship_row][ship_col] == "X":
             ship_row, ship_col = randint(0, 7), randint(0, 7)
-        board[ship_row][ship_col] = "X"
+        hidden_board[ship_row][ship_col] = "X"
 
 
 def get_ship_location(): 
@@ -52,30 +52,20 @@ turns = 10
 print("Welcome to battleship")
 print("---------------------")
 while turns > 0:
-    if (turns == 0):
-        print("Game Over")
-        print_board(board)
+    print_board(board)
+    print("---------------------")
+    print_board(hidden_board)
     row, col = get_ship_location()
     if board[row][col] == '-':
         print("You guessed that already")
     elif board[row][col] == "X":
-        print("congratulations, you hit the battleship")
-        board[row][col] = "X"
+        print(f"You hit the battleship you have {turns} turns left")
+        board[row][col] = "@"
         turns -= 1
+    elif count_hit_ships(board) == 5:
+        print("Well done you sunk all the battleships")
+        break
     else:
-        print("Sorry, you missed")
+        print(f"Sorry, you missed you have {turns} turns left")
         board[row][col] = '-'
         turns -= 1
-        if count_hit_ships(board) == 5:
-            print("Well done you sunk all the battleships")
-            break
-        print(f"You have {turns} turns left")
-    
-
-# quit_game = input("Press Q to quit at any time: q")
-# if quit_game == "Q" or quit_game == "q":
-    
-
-
- 
-    
