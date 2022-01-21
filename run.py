@@ -59,13 +59,13 @@ while turns > 0:
     if board[row][col] == '-':
         print("You guessed that already")
     elif hidden_board[row][col] == "X":
-        print(f"You hit the battleship you have {turns} turns left")
-        board[row][col] = "@"
+        print("You hit the battleship you have " + str(turns) + " turns left")
+        board[row][col] = "X"
         turns -= 1
-    elif count_hit_ships(board) == 5:
-        print("Well done you sunk all the battleships")
-        break
     else:
-        print(f"Sorry, you missed you have {turns} turns left")
+        print("Sorry, you missed you have " + str(turns) + " turns left")
         board[row][col] = '-'
         turns -= 1
+    if count_hit_ships(board) == 5:
+        print("Well done you sunk all the battleships")
+        break
