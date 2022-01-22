@@ -39,9 +39,13 @@ def create_user_ships(board):
 
 def computer_guess():
     computer_row, computer_col = randint(0, 7), randint(0, 7)
-    return computer_row, computer_col
+    return int(computer_row) - 1, int(computer_col) - 1
+    print("The computer guessed" + str(computer_row) + str(computer_col))
 
-      
+
+computer_guess()
+
+
 def get_ship_location(): 
     row = input("Please enter a row between 1-8:\n")
     while row not in '1, 2, 3, 4, 5, 6, 7, 8':
@@ -63,13 +67,25 @@ def count_hit_ships(board):
     return count
 
 
+def get_user_name():
+    user_name = ""
+    user_name = input("What is your name:\n")
+    if user_name == "":
+        user_name = input("What is your name:\n")
+    else:
+        print(user_name + "'s board")
+    return user_name
+
+
 create_user_ships(users_board)
 create_ships(hidden_board)
 turns = 10
 print("Welcome to battleship")
 print("Hit 5 ships within " + str(turns) + " turns")
-print("---------------------")
+get_user_name()
 while turns > 0:
+    print_board(users_board)
+    print("---------------------")
     print_board(board)
     print("---------------------")
     row, col = get_ship_location()
