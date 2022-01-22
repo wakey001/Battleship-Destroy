@@ -75,12 +75,13 @@ def count_hit_user_ships(users_board):
 
 
 def did_computer_hit():
-    if users_board[row][col] == "X":
+    computer_row, computer_col = computer_guess()
+    if users_board[computer_row][computer_col] == "X":
         print("Computer hit a battleship you have \n")
-        users_board[row][col] = "X"
-    if users_board[row][col] == "U":
+        users_board[computer_row][computer_col] = "X"
+    if users_board[computer_row][computer_col] == "U":
         print("computer missed ")
-        users_board[row][col] = "-"
+        users_board[computer_row][computer_col] = "-"
 
 
 def get_user_name():
@@ -108,16 +109,19 @@ while turns > 0:
     if board[row][col] == '-':
         print("You guessed that already")
         computer_guess()
+        did_computer_hit()
     elif hidden_board[row][col] == "X":
         print("You hit the battleship you have " + str(turns) + " turns left")
         board[row][col] = "X"
         turns -= 1
         computer_guess()
+        did_computer_hit()
     else:
         print("Sorry, you missed you have " + str(turns) + " turns left")
         board[row][col] = '-'
         turns -= 1
         computer_guess()
+        did_computer_hit()
     if count_hit_ships(board) == 5:
         print("Well done you sunk all the battleships")
         break
