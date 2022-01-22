@@ -29,10 +29,7 @@ def create_ships(board):
         board[ship_row][ship_col] = "X"
 
 
-print_board(users_board)
-
-
-def create_user_ships_board(board):
+def create_user_ships(board):
     for ship in range(5):
         ship_row, ship_col = randint(0, 7), randint(0, 7)
         while users_board[ship_row][ship_col] == "X":
@@ -40,6 +37,11 @@ def create_user_ships_board(board):
         users_board[ship_row][ship_col] = "X"
 
 
+def computer_guess():
+    computer_row, computer_col = randint(0, 7), randint(0, 7)
+    return computer_row, computer_col
+
+      
 def get_ship_location(): 
     row = input("Please enter a row between 1-8:\n")
     while row not in '1, 2, 3, 4, 5, 6, 7, 8':
@@ -61,6 +63,7 @@ def count_hit_ships(board):
     return count
 
 
+create_user_ships(users_board)
 create_ships(hidden_board)
 turns = 10
 print("Welcome to battleship")
