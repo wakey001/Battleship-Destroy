@@ -3,9 +3,12 @@ from random import randint
 
 board = []
 hidden_board = []
+users_board = []
 
 
 # "O" = Capital letter o
+for i in range(8):
+    users_board.append(["U"] * 8)
 for i in range(8):
     hidden_board.append(["H"] * 8)
 for i in range(8):
@@ -24,6 +27,17 @@ def create_ships(board):
         while board[ship_row][ship_col] == "X":
             ship_row, ship_col = randint(0, 7), randint(0, 7)
         board[ship_row][ship_col] = "X"
+
+
+print_board(users_board)
+
+
+def create_user_ships_board(board):
+    for ship in range(5):
+        ship_row, ship_col = randint(0, 7), randint(0, 7)
+        while users_board[ship_row][ship_col] == "X":
+            ship_row, ship_col = randint(0, 7), randint(0, 7)
+        users_board[ship_row][ship_col] = "X"
 
 
 def get_ship_location(): 
