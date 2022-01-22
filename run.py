@@ -38,12 +38,10 @@ def create_user_ships(board):
 
 
 def computer_guess():
-    computer_row, computer_col = randint(0, 7), randint(0, 7)
+    computer_row, computer_col = randint(1, 8), randint(1, 8)
+    print("The computer guessed")
+    print("row " + str(computer_row) + " "  "col " + str(computer_col))
     return int(computer_row) - 1, int(computer_col) - 1
-    print("The computer guessed" + str(computer_row) + str(computer_col))
-
-
-computer_guess()
 
 
 def get_ship_location(): 
@@ -65,6 +63,24 @@ def count_hit_ships(board):
             if col == "X":
                 count += 1
     return count
+
+
+def count_hit_user_ships(users_board):
+    user_count = 0
+    for row in users_board:
+        for col in row:
+            if col == "X":
+                user_count += 1
+    return user_count
+
+
+def did_computer_hit():
+    if users_board[row][col] == "X":
+        print("Computer hit a battleship you have \n")
+        users_board[row][col] = "X"
+    if users_board[row][col] == "U":
+        print("computer missed ")
+        users_board[row][col] = "-"
 
 
 def get_user_name():
@@ -91,14 +107,17 @@ while turns > 0:
     row, col = get_ship_location()
     if board[row][col] == '-':
         print("You guessed that already")
+        computer_guess()
     elif hidden_board[row][col] == "X":
         print("You hit the battleship you have " + str(turns) + " turns left")
         board[row][col] = "X"
         turns -= 1
+        computer_guess()
     else:
         print("Sorry, you missed you have " + str(turns) + " turns left")
         board[row][col] = '-'
         turns -= 1
+        computer_guess()
     if count_hit_ships(board) == 5:
         print("Well done you sunk all the battleships")
         break
