@@ -71,7 +71,15 @@ The user is prompted for their name, this is then shown above there board. They 
 ## Wireframes 
 I did not include these as there is no front end.
 ## Existing features
-* 
+* The user guesses a row and column, these must me integers or the game will repeat.
+[]()
+After entering the users guess the computer has its guess. And both the users board and computers board are shown, as well as the number of guesses remaining.
+[]()
+The user is then told of the outcome where different keys are used to display hits and misses. If the user has already guessed the same co-ordinates previously, they will be given a error msg and will be prompted to enter a different set of co-ordinates.
+[]()
+Once someone wins or turns have expired the game is over
+[]()
+
 ## Features to be implemented
 * To include the option of increased board size
 * To have ships longer than one co-ordinate 
