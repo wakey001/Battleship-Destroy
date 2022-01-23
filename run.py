@@ -16,13 +16,15 @@ for i in range(8):
 
 
 def print_board(board):
-    """Removes all quotes and instead adds blank space"""
+    """Removes all quotes and instead adds blank space."""
+
     for row in board:
         print(" ".join(row))
 
 
 def create_ships(board):
-    """Generates 5 ships in random locations"""
+    """Generates 5 ships in random locations."""
+
     for ship in range(5):
         ship_row, ship_col = randint(0, 7), randint(0, 7)
         while board[ship_row][ship_col] == "X":
@@ -31,7 +33,8 @@ def create_ships(board):
 
 
 def create_user_ships(board):
-    """Generates 5 ships in random locations"""
+    """Generates 5 ships in random locations."""
+
     for ship in range(5):
         ship_row, ship_col = randint(0, 7), randint(0, 7)
         while users_board[ship_row][ship_col] == "X":
@@ -41,6 +44,7 @@ def create_user_ships(board):
 
 def computer_guess():
     """Randomly guesses a row and col."""
+
     computer_row, computer_col = randint(1, 8), randint(1, 8)
     print("The computer guessed")
     print("row " + str(computer_row) + " "  "col " + str(computer_col))
@@ -49,6 +53,7 @@ def computer_guess():
 
 def get_ship_location():
     """Asks user input for row,col."""
+
     row = input("Please enter a row between 1-8:\n")
     while row not in '1, 2, 3, 4, 5, 6, 7, 8':
         print("Error enter a number between 1-8")
@@ -62,6 +67,7 @@ def get_ship_location():
 
 def count_hit_ships(board):
     """Iterates through the board to find "X"s"""
+
     count = 0
     for row in board:
         for col in row:
@@ -70,31 +76,34 @@ def count_hit_ships(board):
     return count
 
 
-def count_hit_user_ships(users_board):
+def count_hit_user_ships():
     """Iterates through the board to find "X"s"""
+
     user_count = 0
     for row in users_board:
         for col in row:
-            if col == "X":
+            if col == "@":
                 user_count += 1
     return user_count
 
 
 def did_computer_hit():
     """Tells the user if the computer hit them """
+
     computer_row, computer_col = computer_guess()
     if users_board[computer_row][computer_col] == "X":
-        print("Computer hit a battleship you have \n")
-        users_board[computer_row][computer_col] = "X"
+        print("Computer hit a battleship  \n")
+        users_board[computer_row][computer_col] = "@"
     if users_board[computer_row][computer_col] == "U":
         print("computer missed ")
         users_board[computer_row][computer_col] = "-"
-    if count_hit_user_ships(users_board) == 5:
+    if count_hit_user_ships() == 5:
         print("You lost all your battleships are destroyed")
-
+        
 
 def get_user_name():
-    """Gets username input"""
+    """Gets username input and puts it above the users ships"""
+
     user_name = ""
     user_name = input("What is your name:\n")
     if user_name == "":
