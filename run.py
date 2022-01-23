@@ -12,13 +12,13 @@ for i in range(8):
 for i in range(8):
     hidden_board.append(["H"] * 8)
 for i in range(8):
-    board.append(["O"] * 8)  
+    board.append(["O"] * 8)
 
 
 def print_board(board):
     """Removes all quotes and instead adds blank space"""
     for row in board:
-        print(" ".join(row))  
+        print(" ".join(row))
 
 
 def create_ships(board):
