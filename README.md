@@ -1,8 +1,8 @@
-# Card 
+# Battleship-Destroy 
 * [insert ami]()
 # Goal for this project
 * This project will be a python terminal battleship game where the player will face the computer.
-The player gets 10 turns to find all randomly placed ships on a 2d style grid. The player finds the ships by entering the row and column co-ordinates as numbers. The game ends when either the turns are used up or the player hits all the computers ships. 
+The player gets 10 turns to find all randomly placed ships on a 2d style grid. The player finds the ships by entering the row and column co-ordinates as numbers. The game ends when either the turns are used up or the player hits all the computers ships or the computer hits all the user's ships.
 # Table of Contents
 * [UX](#ux "UX")
     * [User Goals](#user-goals "User Goals")
@@ -37,7 +37,7 @@ The player gets 10 turns to find all randomly placed ships on a 2d style grid. T
 ## User Goals
 * Know when it is the users go and not
 * Clear instruction as to how to play the game
-* Know the outcome of the game, win, lose or draw
+* Know the outcome of the game, win or lose
 ## User stories
 * As a user, I want to be able to personalise my game
 * As a user, I want to be clearly navigated through the game
@@ -68,13 +68,13 @@ The player gets 10 turns to find all randomly placed ships on a 2d style grid. T
 # How to play
 The user is prompted for their name, this is then shown above there board. They are then asked which row they would like to guess, row and column and also the number of turns is displayed. The user is then told if they hit or missed the computers ships and told of thier turns remaining, and subsequently told if they try to use the same co-ordinates later on. If the user hits all the ships they win, and the game is over, it is also over if they run out of turns.
 
-## Wireframes
-
-
+## Wireframes 
+I did not include these as there is no front end.
 ## Existing features
 * 
 ## Features to be implemented
-* 
+* To include the option of increased board size
+* To have ships longer than one co-ordinate 
 
 \
 &nbsp;
@@ -119,10 +119,17 @@ Once focused on that line of code it was then quite obvious that I had put space
 
 * This then fixed the problem and the miss then logged the "-" as it should have. And did not displace the grid anymore.
 
-
+## Current Bugs
+* Sadly at the time of writing, the game has a few bugs I've not been able to iron out which I do admit mean the game is broken.
+The first :
+* Computer has two guesses in succession for the users one guess, but oddly only the second guess actually marks onto the users board.
+The second :
+* When prompted for an input of row or column if the user presses the enter key this can be bypasses and cause an error.
+The third :
+* The game has no game over or restart. It only stops once all the turns are used. 
 
 ## Deployment
-The site was deployed via Heroku. Here is the live link - []()
+The site was deployed via Heroku. Here is the live link - [Herokuapp-game](https://battleship-destroy.herokuapp.com/)
 
 The project repository was created using the *Code-Institute-Org/python-essentials-template* on GitHub and edited using GitPod.
 

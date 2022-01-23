@@ -100,7 +100,7 @@ def did_computer_hit():
     if count_hit_user_ships(users_board) == 5:
         print("You lost all your battleships are destroyed")
         
-   
+         
 create_user_ships(users_board)
 create_ships(hidden_board)
 turns = 10
