@@ -76,7 +76,7 @@ def count_hit_ships(board):
     return count
 
 
-def count_hit_user_ships():
+def count_hit_user_ships(users_board):
     """Iterates through the board to find "X"s"""
 
     user_count = 0
@@ -88,47 +88,34 @@ def count_hit_user_ships():
 
 
 def did_computer_hit():
-    """Tells the user if the computer hit them """
+    """Tells the user if the computer's guess hit them """
 
     computer_row, computer_col = computer_guess()
     if users_board[computer_row][computer_col] == "X":
-        print("Computer hit a battleship  \n")
+        print("Computer hit a battleship")
         users_board[computer_row][computer_col] = "@"
     if users_board[computer_row][computer_col] == "U":
         print("computer missed ")
         users_board[computer_row][computer_col] = "-"
-    if count_hit_user_ships() == 5:
+    if count_hit_user_ships(users_board) == 5:
         print("You lost all your battleships are destroyed")
         
-
-def get_user_name():
-    """Gets username input and puts it above the users ships"""
-
-    user_name = ""
-    user_name = input("What is your name:\n")
-    if user_name == "":
-        user_name = input("What is your name:\n")
-    else:
-        print(user_name + "'s board")
-    return user_name
-
-
+   
 create_user_ships(users_board)
 create_ships(hidden_board)
 turns = 10
 print("Welcome to battleship")
 print("Hit 5 ships within " + str(turns) + " turns")
-get_user_name()
 while turns > 0:
+    print("Users board")
     print_board(users_board)
     print("---------------------")
+    print("Computer's board")
     print_board(board)
     print("---------------------")
     row, col = get_ship_location()
     if board[row][col] == '-':
         print("You guessed that already")
-        computer_guess()
-        did_computer_hit()
     elif hidden_board[row][col] == "X":
         print("You hit the battleship you have " + str(turns) + " turns left")
         board[row][col] = "X"
