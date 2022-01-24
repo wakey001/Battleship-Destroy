@@ -103,7 +103,7 @@ def did_computer_hit():
          
 create_user_ships(users_board)
 create_ships(hidden_board)
-turns = 10
+turns = 9
 print("Welcome to battleship")
 print("Hit 5 ships within " + str(turns) + " turns")
 while turns > 0:
@@ -131,3 +131,6 @@ while turns > 0:
     if count_hit_ships(board) == 5:
         print("Well done you sunk all the battleships")
         break
+    if turns == 0:
+        print("Game over your out of turns!")
+    
