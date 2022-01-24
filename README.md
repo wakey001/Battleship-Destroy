@@ -72,11 +72,11 @@ The user is prompted for their name, this is then shown above there board. They 
 I did not include these as there is no front end.
 ## Existing features
 * The user guesses a row and column, these must me integers or the game will repeat.
-[]()
+[Only integers](https://user-images.githubusercontent.com/83303996/150703274-a1bcebc9-7792-4a3d-871f-e170929b707f.PNG)
 After entering the users guess the computer has its guess. And both the users board and computers board are shown, as well as the number of guesses remaining.
-[]()
+[Turns left](https://user-images.githubusercontent.com/83303996/150703378-054e3cc9-986b-4c0a-8c29-cc7a68074470.PNG)
 The user is then told of the outcome where different keys are used to display hits and misses. If the user has already guessed the same co-ordinates previously, they will be given a error msg and will be prompted to enter a different set of co-ordinates.
-[]()
+[Guessed already](https://user-images.githubusercontent.com/83303996/150703455-353ee32e-91d7-4a31-b38d-7513f8807a47.PNG)
 Once someone wins or turns have expired the game is over
 []()
 
@@ -135,6 +135,8 @@ The second :
 * When prompted for an input of row or column if the user presses the enter key this can be bypasses and cause an error.
 The third :
 * The game has no game over or restart. It only stops once all the turns are used. 
+The fourth:
+* The game is incredibly hard to win as the board is large and the ships are tiny.
 
 ## Deployment
 The site was deployed via Heroku. Here is the live link - [Herokuapp-game](https://battleship-destroy.herokuapp.com/)
