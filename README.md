@@ -1,5 +1,5 @@
 # Battleship-Destroy 
-* []()
+* ![Main image](https://user-images.githubusercontent.com/83303996/150704792-9146c0d6-5436-4843-8d7b-7543756761a4.PNG)
 # Goal for this project
 * This project will be a python terminal battleship game where the player will face the computer.
 The player gets 10 turns to find all randomly placed ships on a 2d style grid. The player finds the ships by entering the row and column co-ordinates as numbers. The game ends when either the turns are used up or the player hits all the computers ships or the computer hits all the user's ships.
